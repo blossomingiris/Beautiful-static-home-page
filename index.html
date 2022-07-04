@@ -1,3 +1,5 @@
+<!-- Following webpage was inspired by https://www.buttercreamflowercakes.com/ -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,191 +7,644 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/style.css">
-	<title>Easy Framework</title>
+	<link rel="stylesheet" href="/css/style.css">
+	<script src="https://kit.fontawesome.com/746b32e2c0.js" crossorigin="anonymous"></script>
+	<title>Eat cake, be merry</title>
+
+	<style>
+		.text {
+			font-weight: 300;
+			word-wrap: break-word;
+			text-align: center;
+		}
+
+		.cards-text {
+			font-weight: bold;
+		}
+
+		.card-span-border {
+			border-right: 2px solid rgb(221, 221, 221);
+		}
+
+		.fa-solid,
+		.fa-regular,
+		.fa-brands {
+			color: #777;
+			font-size: 1.5rem;
+		}
+
+		.fa-footer {
+			font-size: 1rem;
+		}
+
+		.gradient-container,
+		.gradient-inner-container {
+			background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(237, 236, 236, 1) 97%);
+		}
+
+		.supplies-content {
+			position: relative;
+			background: url(/Images/Baking_process.jpg);
+			background-size: cover;
+		}
+
+		.banner-content {
+			position: relative;
+			background: url(/Images//Woman_makes\ _flower_cakes.webp);
+			background-size: cover;
+		}
+
+
+		.explore-content {
+			position: relative;
+			background: url(/Images/Girl_with_roses.jpg);
+			background-size: cover;
+		}
+
+		.supplies-content::before,
+		.banner-content::before,
+		.explore-content::before {
+			content: "";
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		.banner-content::before {
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.text-banner,
+		.text-supplies,
+		.text-explore,
+		.btn-gray {
+			position: relative;
+		}
+
+		.text-banner {
+			font-weight: lighter;
+		}
+
+		.break-line {
+			background-color: #716c6c;
+			width: 100%;
+			height: 1px;
+			opacity: 0.2;
+		}
+
+		@media (min-width: 991px) {
+			.card-d {
+				width: 95%;
+			}
+		}
+	</style>
+
 </head>
 
 <body>
-	<nav class="navbar-purple mb-3">
-		<div class="container bg-purple">
-			<h1 class="page-title text-warning">Easier Framework</h1>
-			<p class="text-white mb-1">Easy CSS library</p>
-			<div class="row justify-center">
-				<div class="col-5-xs col-4-lg">
-					<img src="/Images_lib/bookshelves.svg" alt="girl next to the bookshelves">
-				</div>
-				<ul class="ml-2">
-					<li class="my-1 font-md"><a href="#Colors" class="text-warning text-hover-white">Colors </a></li>
-					<li class="my-1 font-md"><a href="#Backgrounds" class="text-warning text-hover-white">Backgrounds</a></li>
-					<li class="my-1 font-md"><a href="#Palette" class="text-warning text-hover-white">Palette</a></li>
-					<li class="my-1 font-md"><a href="#Links" class="text-warning text-hover-white">Links</a></li>
-					<li class="my-1 font-md"><a href="#Buttons" class="text-warning text-hover-white">Buttons</a></li>
-					<li class="my-1 font-md"><a href="#Cards" class="text-warning text-hover-white">Cards</a></li>
-					<li class="my-1 font-md"><a href="#Grid layout" class="text-warning text-hover-white">Grid layout</a></li>
+	<nav class="navbar p-2">
+		<div class="container">
+			<div class="row justify-space-between">
+				<img src="/Images/The Art of Buttercream Flowers.png" alt="Logo of 'Eat cake, be merry'" class="image mb-1"
+					width="100%">
+				<ul class="display-fl font-sm text-gray-dark-7 text-hover-red-dark-6">
+					<li class="ml-2"><a href="#">ABOUT US</a></li>
+					<li class="ml-2"><a href="#">SHOP</a></li>
+					<li class="ml-2"><a href="#">CLASSES</a></li>
+					<li class="ml-2"><a href="#">SING IN</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<div class="container">
-		<!--colors-->
-		<a name="Colors"></a>
-		<h2 class="my-2">Colors</h2>
-		<span class="text-primary">Primary text</span>
-		<span class="text-secondary">Secondary text</span>
-		<span class="text-danger">Error text</span>
-		<span class="text-warning">Warning text</span>
-		<span class="text-blue">Blue text</span>
-		<span class="text-red">Red text</span>
-		<span class="text-green">Green text</span>
-		<span class="text-yellow">Yellow text</span>
-		<span class="text-purple">Purple text</span>
-		<span class="text-pink">Pink text</span>
-		<span class="text-orange">Orange text</span>
-		<span class="text-gray mb-4">Gray text</span>
+	<main>
+		<section class="banner-content py-5">
+			<h1 class="text text-banner text-white font-3xl p-3 display-fl justify-center">The Art of <br>
+				Buttercream Flowers</h1>
+			<p class="text font-md text-banner text-white display-fl justify-center">How to Build. <br> Pipe and Arrange
+				<br> Beautiful Buttercream Flower Cakes
+			</p>
+		</section>
 
-		<br><br>
-		<a name="Backgrounds"></a>
-		<h2 class="my-2">Backgrounds</h2>
-		<span class="bg-primary text-white">Primary background</span>
-		<span class="bg-secondary text-white">Secondary background</span>
-		<span class="bg-danger text-white">Error background</span>
-		<span class="bg-warning text-white">Warning background</span>
-		<span class="bg-blue text-white">Blue background</span>
-		<span class="bg-red text-white">Red background</span>
-		<span class="bg-green text-white">Green background</span>
-		<span class="bg-yellow text-white">Yellow background</span>
-		<span class="bg-purple text-white">Purple background</span>
-		<span class="bg-pink text-white">Pink background</span>
-		<span class="bg-orange text-white">Orange background</span>
-		<span class="bg-gray text-white">Gray background</span>
-		<br><br>
-
-		<a name="Palette"></a>
-		<h2 class="my-2">Palette</h2>
-		<span class="bg-red-dark-8 text-white p-">Primary dark 8</span>
-		<span class="bg-red-dark-6 text-white">Primary dark 6</span>
-		<span class="bg-red-dark-4 text-white">Primary dark 4</span>
-		<span class="bg-red-dark-2 text-white">Primary dark 2</span>
-		<span class="bg-red text-white">Primary background</span>
-		<span class="bg-red-light-2 text-white">Primary light</span>
-		<span class="bg-red-light-4 text-white">Primary light</span>
-		<span class="bg-red-light-6 text-white">Primary light</span>
-		<span class="bg-red-light-8 text-white">Primary light</span>
-		<br><br>
-
-		<a name="Links"></a>
-		<h2 class="my-2">Links</h2>
-		<a href="#" class="text-primary text-hover-purple-light-1">Colorful hover link</a>
-		<br><br>
-
-		<!--font-sizes-->
-		<a name="Font-sizes"></a>
-		<h2 class="my-2">Font sizes</h2>
-		<div class="font-xs">I'm small font</div>
-		<div class="font-md">I'm medium font</div>
-		<div class="font-lg">I'm big font</div>
-		<div class="font-xl">I'm very big font</div>
-		<div class="font-xxl">I'm very very big font</div>
-		<br><br>
-
-		<!--buttons-->
-		<a name="Buttons"></a>
-		<h2 class="my-2">Buttons</h2>
-		<div class="row">
-			<div class="col-12-xs col-6-md col-12-lg">
-				<a href="#" class="btn mb-1">Default</a>
-				<a href="#" class="btn-primary text-white mb-1">Sign in</a>
-				<a href="#" class="btn-secondary text-white mb-1">Sign in</a>
-				<a href="#" class="btn-danger text-white mb-1">Sign in</a>
-				<a href="#" class="btn-warning text-white mb-1">Sign in</a>
-				<a href="#" class="btn-outlined-orange text-orange text-hover-white mb-1">Sign in</a>
-				<a href="#" class="btn-outlined-gray text-gray text-hover-white mb-1">Sign in</a>
-				<a href="#" class="btn-complement-purple mb-1">Sign in</a>
-				<a href="#" class="btn-complement-primary mb-1">Sign in</a>
-				<a href="#" class="btn-gradient-chill text-white mb-1">Chill</a>
-				<a href="#" class="btn-gradient-warm text-white mb-1">Warm</a>
-				<a href="#" class="btn-gradient-cold text-white mb-1">Cold</a>
-				<a href="#" class="btn-gradient-marine text-white mb-1">Marine</a>
-				<a href="#" class="btn-gradient-silver text-black mb-1">Silver</a>
+		<section>
+			<div class="container">
+				<h1 class="text text-gray-dark-8 font-xl p-3 display-fl justify-center">Ready to Create <br> Beautiful
+					Buttercream Flower Cakes?</h1>
+				<p class="text text-gray-dark-5 font-basic display-fl justify-center px-5">If you've always wanted to learn
+					how
+					to
+					create realistic
+					buttercream
+					flower
+					cakes, you're in the right place! Whether you are a beginner who wants to make special cakes for your
+					friends
+					and family or a professional looking to grow your business by offering your clients stunning floral cakes,
+					these
+					classes will guide you through everything you need to know. Whether you are interested in an individual
+					course
+					or discounted bundles, explore the classes below to find the one that best suits your learning needs.</p>
 			</div>
+		</section>
+		<div class="container">
+			<h1 class="text text-gray-dark-8 font-xl pt-5 display-fl justify-center">Course Bundles</h1>
+			<div>
+				<p class="text text-gray-dark-5 font-lg px-5 display-fl justify-center">Each bundle includes
+					multiple courses that
+					are
+					packaged
+					together <br> for more savings!</p>
+			</div>
+
 		</div>
-		<br><br>
-		<!--cards-->
 
-		<a name="Cards"></a>
-		<h2 class="my-2">Cards</h2>
-		<div class="row gap-2 justify-flex-start">
-			<div class="col-12-xs col-5-sm col-3-xl">
-				<div class="card">
-					<div class="card-info">
-						<h1 class="card-title">Card title</h1>
-						<p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque illum
-							consequatur,
-							distinctio quaerat accusantium ratione.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-12-xs col-5-sm col-3-xl">
-				<div class="card-d">
-					<div class="card-d-info">
-						<h1 class="card-d-title">Card title</h1>
-						<p class="card-d-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque illum
-							consequatur,
-							distinctio quaerat accusantium ratione.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<br><br>
+		<section class="">
+			<div class="container">
+				<div class="row p-0 justify-center">
 
-		<!--grid system-->
-		<a name="Grid layout"></a>
-		<h2 class="my-2">Grid layout (Try to resize)</h2>
-		<div class="row gap-2 justify-center">
-			<div class="col-12-xs col-5-sm col-3-xl">
-				<div class="card">
-					<div class="card-info">
-						<h3 class="card-title">Card title</h3>
-						<p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque illum
-							consequatur.</p>
+					<div class="col-8-xs col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Buttercream Flower Cakes Masterclass</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">134 Lessons</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">$355.00</span>
+								</div>
+								<img src="/Images/Buttercream Flower Cakes Masterclass Bundle.png"
+									alt="Buttercream Flower Cakes Masterclass" class="card-d-img">
+							</div>
+						</a>
 					</div>
+
+					<div class="col-8-xs col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Buttercream Fundamentals (Bundle)</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">33 Lessons</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">$98.00</span>
+								</div>
+								<img src="/Images/Buttercream Fundamentals Bundle.png" alt="Buttercream Flower Cakes Masterclass"
+									class="card-d-img">
+							</div>
+						</a>
+					</div>
+
+					<div class="col-8-xs col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Buttercream Flower Class (Bundle)</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">105 Lessons</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">$275.00</span>
+								</div>
+								<img src="/Images/Buttercream Flower Cakes Masterclass Bundle.png"
+									alt="Buttercream Flower Cakes Masterclass" class="card-d-img">
+							</div>
+						</a>
+					</div>
+
 				</div>
 			</div>
-			<div class="col-12-xs col-5-sm col-3-xl">
-				<div class="card">
-					<div class="card-info">
-						<h3 class="card-title">Card title</h3>
-						<p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque illum
-							consequatur.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-12-xs col-5-sm col-3-xl">
-				<div class="card">
-					<div class="card-info">
-						<h3 class="card-title">Card title</h3>
-						<p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque illum
-							consequatur.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-12-xs col-5-sm col-3-xl">
-				<div class="card">
-					<div class="card-info">
-						<h3 class="card-title">Card title</h3>
-						<p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque illum
-							consequatur.</p>
-					</div>
-				</div>
-			</div>
+		</section>
+
+		<div class="container">
+			<h1 class="text text-gray-dark-8 font-xl pt-5 display-fl justify-center mt-4">Individual Courses</h1>
+			<p class="text text-gray-dark-5 font-lg pt-1 display-fl justify-center">Explore each class to learn more details
+				about its contents!</p>
 		</div>
-	</div>
-	<footer class="bg-gray-dark-7 p-1 mt-2">
-		<div class="row container bg-gray-dark-7 justify-center">
-			<p class="text-white">Copyright &copy2022 Ksenia Rachouti</p>
+
+		<section class="">
+			<div class="container">
+				<div class="row p-0 justify-center">
+
+
+					<div class="col-8-xs col-3-md col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Color Masterclass</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">1 Lesson</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">$36.00</span>
+								</div>
+								<img src="/Images/Color Masterclass.png" alt="" class="card-d-img">
+							</div>
+						</a>
+					</div>
+
+
+					<div class="col-8-xs col-2-md col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Recipes</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">13 Lessons</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">$32.00</span>
+								</div>
+								<img src="/Images/Recipes.png" alt="" class="card-d-img">
+							</div>
+						</a>
+					</div>
+
+
+
+					<div class="col-8-xs col-2-md col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Cake Construction</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">6 Lessons</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">$32.00</span>
+								</div>
+								<img src="/Images/Cake Construction.png" alt="Buttercream Flower Cakes Masterclass" class="card-d-img">
+							</div>
+						</a>
+					</div>
+
+
+
+					<div class="col-8-xs col-2-md col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Into to Piping</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">13 Lessons</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">$32.00</span>
+								</div>
+								<img src="/Images/Intro to Piping.png" alt="Buttercream Flower Cakes Masterclass" class="card-d-img">
+							</div>
+						</a>
+					</div>
+
+					<div class="col-8-xs col-2-md col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Flat Flowers</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">39 Lessons</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">$98.00</span>
+								</div>
+								<img src="/Images/Flat Flowers.png" alt="Buttercream Flower Cakes Masterclass" class="card-d-img">
+							</div>
+						</a>
+					</div>
+
+
+
+					<div class="col-8-xs col-2-md col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Dimensional Flowers</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">37 Lessons</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">$92.00</span>
+								</div>
+								<img src="/Images/Dimensional Flowers.png" alt="Buttercream Flower Cakes Masterclass"
+									class="card-d-img">
+							</div>
+						</a>
+					</div>
+
+
+					<div class="col-8-xs col-2-md col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Fillers and Foliage</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">27 Lessons</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">$60.00</span>
+								</div>
+								<img src="/Images/Fillers and Foliage.png" alt="" class="card-d-img">
+							</div>
+						</a>
+					</div>
+
+
+
+					<div class="col-8-xs col-2-md col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Arrangement</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">13 Lessons</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">$32.00</span>
+								</div>
+								<img src="/Images/Arrangement.png" alt="" class="card-d-img">
+							</div>
+						</a>
+					</div>
+
+
+
+					<div class="col-8-xs col-2-md col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Free Rose Tutorial</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">6 Lessons</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">Free</span>
+								</div>
+								<img src="/Images/Free Rose Tutorial.png" alt="" class="card-d-img">
+							</div>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<div class="container">
+			<h1 class="text text-gray-dark-8 font-xl mt-4 pt-5 display-fl justify-center">Project-Based Courses</h1>
+			<p class="text text-gray-dark-5 font-lg pt-1 display-fl justify-center">Explore each class to learn more
+				details
+				about its contents!</p>
 		</div>
+
+		<section class="">
+			<div class="container">
+				<div class="row p-0 justify-center">
+					<div class="col-8-xs col-2-md col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Moody Peony</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">32 Lessons</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">36.00$</span>
+								</div>
+								<img src="/Images/Moody Peony Cake.png" alt="" class="card-d-img">
+							</div>
+						</a>
+					</div>
+
+
+
+					<div class="col-8-xs col-2-md col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Buttercream Dried Floral Cake</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">23 Lessons</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">36.00$</span>
+								</div>
+								<img src="/Images/Buttercream Dried Floral Cake.png" alt="" class="card-d-img">
+							</div>
+						</a>
+					</div>
+
+
+
+					<div class="col-8-xs col-2-md col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Apple Blossom Wreath Cake</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">43 Lessons</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">36.00$</span>
+								</div>
+								<img src="/Images/Apple Blossom Wreath Cake.png" alt="" class="card-d-img">
+							</div>
+						</a>
+					</div>
+
+
+
+					<div class="col-8-xs col-2-md col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Holiday Wreath Cake</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">27 Lessons</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">36.00$</span>
+								</div>
+								<img src="/Images/Holiday Wreath Cake.png" alt="" class="card-d-img">
+							</div>
+						</a>
+					</div>
+
+
+
+					<div class="col-8-xs col-2-md col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Palette Knife Floral Cake</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">33 Lessons</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">36.00$</span>
+								</div>
+								<img src="/Images/Palette Knife Floral Cake.png" alt="" class="card-d-img">
+							</div>
+						</a>
+					</div>
+
+					<div class="col-8-xs col-2-md col-4-lg display-fl justify-center">
+						<a href="#">
+							<div class="card-d p-0">
+								<div class="card-d-title py-1">All Courses</div>
+								<div class="card-d-info">Palette Knife Floral Cake</div>
+								<div class="row justify-center p-1">
+									<span class="cards-text px-1 text-gray-dark-2 font-sm card-span-border">44 Lessons</span>
+									<span class="cards-text px-1 text-gray-dark-3 font-sm">36.00$</span>
+								</div>
+								<img src="/Images/Fall Floral Cupcakes.png" alt="" class="card-d-img">
+							</div>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="gradient-container pb-2">
+			<div class="container gradient-inner-container pb-2">
+				<h1 class="text text-gray-dark-8 font-xl mt-4 pt-5 display-fl justify-center">Key Benefits</h1>
+				<div class="row p-0 justify-center">
+
+					<div class="col-8-xs col-2-md col-4-lg pt-1">
+						<div class="row justify-center"><i class="fa-solid fa-comments"></i></div>
+						<h2 class=" text-gray-dark-5 font-sm p-2 display-fl justify-center">Discussion</h2>
+						<p class="text text-gray-dark-5 font-basic display-fl justify-center px-2">Every class has built in
+							discussion
+							capabilities, making it easy to interact with the instructor and fellow
+							students. Ask questions, share ideas and inspire one another as you take the course.</p>
+					</div>
+
+					<div class="col-8-xs col-2-md col-4-lg pt-3">
+						<div class="row justify-center"><i class="fa-regular fa-clock"></i></div>
+						<h2 class=" text-gray-dark-5 font-sm p-2 display-fl justify-center">Self-paced Learning</h2>
+						<p class="text text-gray-dark-5 font-basic display-fl justify-center px-2">Everyone has different levels
+							of
+							experience and comfort when it comes to piping, so being able to absorb information at your own pace is
+							important to learning well. Review tutorials and watch videos as many times as you want, at the speed
+							you
+							want, across all devices.</p>
+					</div>
+
+					<div class="col-8-xs col-2-md col-4-lg pt-3">
+						<div class="row justify-center"><i class="fa-solid fa-video"></i></div>
+						<h2 class=" text-gray-dark-5 font-sm p-2 display-fl justify-center">Supplemental Videos</h2>
+						<p class="text text-gray-dark-5 font-basic display-fl justify-center px-2">Piping is a visually
+							dimensional
+							skill that requires more than just written instructions and step-by-step photos. To enhance the learning
+							experience, each flower is accompanied by a video to better communicate the angles, speed and pressure
+							necessary to pipe. Each recipe has a supporting video as well.</p>
+					</div>
+
+
+					<div class="col-8-xs col-2-md col-4-lg pt-5">
+						<div class="row justify-center"><i class="fa-brands fa-facebook-square"></i></div>
+						<h2 class=" text-gray-dark-5 font-sm p-2 display-fl justify-center">Facebook Group Community</h2>
+						<p class="text text-gray-dark-5 font-basic display-fl justify-center px-2">Join like minded cake
+							decorators
+							in
+							our exclusive Facebook group. This is a place to build community, share your personal tips and
+							resources,
+							post pictures of your cakes and encourage one another on this buttercream journey.</p>
+					</div>
+
+
+					<div class="col-8-xs col-2-md col-4-lg pt-3">
+						<div class="row justify-center"><i class="fa-solid fa-dollar-sign"></i></div>
+						<h2 class=" text-gray-dark-5 font-sm p-2 display-fl justify-center">Discount Code for SHOP</h2>
+						<p class="text text-gray-dark-5 font-basic display-fl justify-center px-2">Enroll in a class and receive a
+							special discount code to use in the SHOP. Code can be used multiple times and applies to all tool kits,
+							supplies and even in-person workshops.</p>
+					</div>
+
+
+					<div class="col-8-xs col-2-md col-4-lg pt-3">
+						<div class="row justify-center"><i class="fa-solid fa-user"></i></div>
+						<h2 class=" text-gray-dark-5 font-sm p-2 display-fl justify-center">LIVE In-Person Workshops</h2>
+						<p class="text text-gray-dark-5 font-basic display-fl justify-center px-1">Want more hands-on help and
+							in-depth instruction? Schedule a private 1x1 class or register for a group class to meet Liz and get her
+							expert help in person. View upcoming classes in the SHOP.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				<h1 class="text text-gray-dark-8 font-xl pt-5 display-fl justify-center">Meet Your Instructor</h1>
+				<div class="row p-0 justify-center">
+					<div class="col-8-xs col-2-md col-4-lg pt-3">
+						<img src="/Images/Liz Shim.jpg" alt="Lisa Shim">
+					</div>
+					<div class="col-8-xs col-2-md col-5-lg pt-3">
+						<h2 class="text-gray-dark-3 p-2">Liza Shim</h2>
+						<p class="text-gray-dark-3 px-2 font-sm">Liz Shim, owner and head designer of Eat Cake Be Merry,
+							discovered
+							that
+							she
+							loved
+							creating edible art when
+							she was first taught how to make sugar flowers as a teenager. She was absolutely amazed at how a simple
+							piece of gumpaste can be transformed into a beautiful rose. After graduating from the University of
+							Michigan, Liz moved to San Francisco where she attended the California Culinary Academy. There she
+							cultivated her passion for cakes and graduated the LeCordon Bleu program with highest honors in baking
+							and
+							pastry arts. Then, she flew across the country to New York City to hone her skills with some of the
+							finest
+							cake designers in the industry. In 2009, Liz started Eat Cake Be Merry and spent a decade making custom
+							cakes for NYC clients. In 2019, Eat Cake Be Merry relocated to Houston, TX.
+							Liz has appeared on television shows, has her works published in books and has been featured in numerous
+							nationwide magazines such as People, Money, Brides, The Knot and Better Home and Gardens. She has been
+							named
+							one of Martha Stewart's Top Pastry Pros in America and has been awarded multiple times for the Best
+							Wedding
+							Cakes in America by Brides Magazine, as well as Best of Weddings by The Knot. She is also the instructor
+							of
+							three online Craftsy classes and teaches workshops worldwide.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="supplies-content p-3 mt-5">
+			<h1 class="text text-supplies text-white font-xl p-3 display-fl justify-center">Supplies <br> and
+				In-Person <br> Workshops</h1>
+			<p class="text-supplies font-md text-white display-fl justify-center">Browse the shop for tool kits, supplies
+				and
+				live
+				workshops.
+				Enrollment in a online course comes with a special discount code.</p>
+			<div class="display-fl justify-center">
+				<a href="#" class="btn-gray text-white m-2">Shop now</a>
+			</div>
+		</section>
+
+
+		<section>
+			<div class="container">
+				<h1 class="text text-gray-dark-8 font-xl pt-5 display-fl justify-center">Buttercream Flower
+					Starter Kit</h1>
+				<div class="row p-0 justify-center">
+					<div class="col-7-xs col-2-md col-4-lg pt-3">
+						<h2 class="text-gray-dark-3 p-2"></h2>
+						<p class="text-gray-dark-3 px-2">The Buttercream Flower Starter Kit is the perfect assortment of tools to
+							get you started. This set conveniently has every piping tip you need to create all 49 flowers & fillers
+							demonstrated in the class. The tool kit includes: Flower nail (1), wooden nail block (1), piping tips
+							(17), flower lifter scissors (1) and plastic couplers (2).</p>
+						<a href="#" class="btn-gray text-white m-2">Purchase now</a>
+					</div>
+					<div class="col-5-xs col-2-md col-3-lg pt-3">
+						<img src="./Images/Buttercream Flower brStarter Kit.jpg" style="border-radius: 5px">
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="explore-content p-3 mt-5">
+			<h1 class="text text-explore text-white font-xl p-2 display-fl justify-center">Ready to learn all <br>
+				about Buttercream
+				Flower Cakes?</h1>
+			<div class="display-fl justify-center">
+				<a href="#" class="btn-gray text-white m-1">Explore all courses</a>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<nav class="navbar p-1">
+			<div class="container">
+				<div class="row justify-space-between">
+					<ul class="display-fl text-gray-dark-7 text-hover-red-dark-6 font-xs">
+						<li class=""><a href="#">HOME</a></li>
+						<li class="ml-3"><a href="#">SHOP</a></li>
+						<li class="ml-3"><a href="#">CLASSES</a></li>
+					</ul>
+					<ul class="display-fl font-xs text-gray-dark-7">
+						<li class="ml-1"><a href="#"><i class="fa-footer fa-brands fa-instagram text-hover-red-dark-6"></i></a></li>
+						<li class="ml-1"><a href="#"><i
+									class="fa-footer fa-brands fa-facebook-square text-hover-red-dark-6"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<span class="break-line display-bl mb-1"></span>
+		<div class="container">
+			<p class="text font-text-gray-dark-7 font-sm pb-1">&copy Copyright</p>
+		</div>
+
 	</footer>
-
 </body>
 
 </html>
