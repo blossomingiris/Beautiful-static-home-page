@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,200&display=swap');
+
+//colors
+$primary: #0e6cff;
+$secondary: #129440;
+$danger: #ff0040;
+$warning: #ffbe0b;
+
+//colors palette
+$colors: (
+	"primary": $primary,
+	"secondary": $secondary,
+	"danger": $danger,
+	"warning": $warning,
+	"blue": #3bb1db,
+	"red": #ed1548,
+	"yellow": #faf325,
+	"green": #18ad59,
+	"orange": #f59505,
+	"purple": #8e02d9,
+	"pink": #f7a8e9,
+	"gray": #918c87,
+	"black": black,
+	"white": white,
+);
+
+
+//spacing 
+$basic-padding: 0.65rem;
+$basic-margin: 0.75rem;
+
+//border
+$basic-border-radius: 20px;
+
+//box-shadow:
+// $natural-box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+$default-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+$soft-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+$natural-box-shadow: 0px 7px 20px rgba(43, 8, 37, 0.2);
+$strong-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px;
+
+//font and font properties (font-sizes):
+$basic-font-family: 'Montserrat', sans-serif;
+$title-font-family: 'Raleway', sans-serif;
+$basic-font-size: 1rem;
+
+//gradients 
+
+$gradients: (
+	"chill": linear-gradient(to right, #fbc2eb 0%, #bfe9ff 51%, #fbc2eb 100%),
+	"warm": linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%),
+	"hot": linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%),
+	"cold": linear-gradient(to right, #83a4d4 0%, #b6fbff 51%, #83a4d4 100%),
+	"marine": linear-gradient(to right, #085078 0%, #85D8CE 51%, #085078 100%),
+	"silver": linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%),
+);

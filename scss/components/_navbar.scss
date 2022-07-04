@@ -1,0 +1,30 @@
+%flex-layout {
+	//won't be complied in css
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar {
+	@extend %flex-layout;
+	padding: $basic-padding $basic-padding*2;
+	// box-shadow: $default-box-shadow;
+
+	.page-title {
+		font-family: $title-font-family;
+		font-size: $basic-font-size*1.5;
+	}
+
+	// .container {
+	// 	@extend %flex-layout;
+	// }
+}
+
+@each $key,
+$value in $colors {
+	.navbar-#{$key} {
+		@extend .navbar;
+		background-color: $value;
+	}
+}

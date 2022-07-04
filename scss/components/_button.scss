@@ -1,0 +1,59 @@
+@mixin btn($bg-color: #e2e2e2) {
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+	border: 0;
+	padding: $basic-padding $basic-padding*2;
+	border-radius: $basic-border-radius;
+	background-color: $bg-color;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+}
+
+.btn {
+	@include btn;
+}
+
+@each $key,
+$value in $colors {
+	.btn-#{$key} {
+		@include btn($value); // background-color: $value;
+
+		&:hover {
+			background-color: lighten($value, 15);
+		}
+	}
+
+	.btn-outlined-#{$key} {
+		@include btn(#fff);
+		border: 1px solid $value;
+
+		&:hover {
+			background-color: $value;
+		}
+	}
+
+	.btn-complement-#{$key} {
+		@include btn($value);
+		color: light-compl($value);
+
+		&:hover {
+			color: $value;
+			background-color: light-compl($value);
+		}
+	}
+}
+
+@each $key,
+$value in $gradients {
+	.btn-gradient-#{$key} {
+		@include btn($value);
+		background-image: $value;
+
+		&:hover {
+			background-position: right center;
+		}
+	}
+}

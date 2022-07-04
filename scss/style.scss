@@ -1,0 +1,24 @@
+//variables and function
+@import 'functions';
+@import 'variables';
+
+//reset and layout
+@import 'reset';
+@import 'breakpoints';
+@import 'grid';
+
+//colors and gradients
+@import 'colors';
+@import 'gradient';
+
+//images 
+
+@import 'image';
+
+//components (buttons, navbar, card)
+@import 'components/card';
+@import 'components/button';
+@import 'components/navbar';
+
+//utilities (margin, padding, opacity, border radius, display, font-sizes)
+@import 'utilities'

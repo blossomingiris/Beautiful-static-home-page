@@ -1,0 +1,149 @@
+@use "sass:math";
+
+//margin and padding
+
+$spaceamounts: (
+	1,
+	2,
+	3,
+	4,
+	5
+);
+
+@each $space in $spaceamounts {
+
+	//margin
+	.m-#{$space} {
+		margin: #{$space}rem;
+	}
+
+	// margin top 
+	.mt-#{$space} {
+		margin: #{$space}rem 0 0 0;
+	}
+
+	// margin bottom 
+	.mb-#{$space} {
+		margin: 0 0 #{$space}rem 0;
+	}
+
+	// margin left 
+	.ml-#{$space} {
+		margin: 0 0 0 #{$space}rem;
+	}
+
+	// margin right 
+	.mr-#{$space} {
+		margin: 0 #{$space}rem 0 0;
+	}
+
+	//margin top and bottom
+	.my-#{$space} {
+		margin: #{$space}rem 0;
+	}
+
+	//margin left and right
+	.mx-#{$space} {
+		margin: 0 #{$space}rem;
+	}
+
+	//padding
+	.p-#{$space} {
+		padding: #{$space}rem;
+	}
+
+	// padding top 
+	.pt-#{$space} {
+		padding: #{$space}rem 0 0 0;
+	}
+
+	// padding bottom 
+	.pb-#{$space} {
+		padding: 0 0 #{$space}rem 0;
+	}
+
+	//padding left
+	.pl-#{$space} {
+		padding: 0 0 0 #{$space}rem;
+	}
+
+	// padding right
+	.pr-#{$space} {
+		padding: 0 #{$space}rem 0 0;
+	}
+
+	//padding top and bottom
+	.py-#{$space} {
+		padding: #{$space}rem 0;
+	}
+
+	//padding left and right
+	.px-#{$space} {
+		padding: 0 #{$space}rem;
+	}
+}
+
+//another way create utilities classes
+$utilities: (
+	"opacity": ("prefix": "op",
+		"values": ("10": 0.1,
+			"20": 0.2,
+			"30": 0.3,
+			"40": 0.4,
+			"50": 0.5,
+			"60": 0.6,
+			"80": 0.8,
+			"90": 0.9,
+			"100": 1,
+		)),
+
+	"border-radius": ("prefix": "b-r",
+		"values": ("default": $basic-border-radius,
+			"none": 0,
+			"xs": math.div($basic-border-radius, 4),
+			"sm": math.div($basic-border-radius, 2),
+			"lg": $basic-border-radius * 2,
+			"round": 50%,
+		)),
+
+	"display": ("prefix": "display",
+		"values": ("n": none,
+			"bl": block,
+			"fl": flex,
+			"inl": inline,
+			"inl-bl": inline-block,
+		)),
+
+	"font-size": ("prefix": "font",
+		"values": ("xs": $basic-font-size * 0.65,
+			"sm": $basic-font-size * 0.85,
+			"basic": $basic-font-size,
+			"md": $basic-font-size * 1.15,
+			"lg": $basic-font-size * 1.5,
+			"xl": $basic-font-size * 1.85,
+			"xxl": $basic-font-size * 2.10,
+			"3xl": $basic-font-size * 3.5, ),
+	),
+);
+
+
+@each $property,
+$map in $utilities {
+	$prefix: map-get($map, "prefix");
+	$values: map-get($map, "values");
+
+	@each $key,
+	$value in $values {
+		@if ($key =="default") {
+			.#{$prefix} {
+				#{$property}: $value;
+			}
+		}
+
+		@else {
+			.#{$prefix}-#{$key} {
+				#{$property}: $value;
+			}
+		}
+	}
+}
